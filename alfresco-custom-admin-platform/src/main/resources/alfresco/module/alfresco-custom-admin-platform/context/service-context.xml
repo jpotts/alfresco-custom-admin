@@ -20,4 +20,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean id="project-service" class="com.ecmarchitect.alfresco.examples.projects.services.ProjectService">
+        <property name="projectsApiUrl" value="${projects.api.url}" />
+    </bean>
+
 </beans>

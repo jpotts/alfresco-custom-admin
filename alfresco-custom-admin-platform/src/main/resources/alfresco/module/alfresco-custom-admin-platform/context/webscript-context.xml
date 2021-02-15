@@ -20,4 +20,9 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="webscript.com.ecmarchitect.alfresco.examples.projects.list.projects.get" class="com.ecmarchitect.alfresco.examples.projects.webscripts.GetProjects"
+		  parent="webscript">
+		<property name="projectService" ref="project-service" />
+	</bean>
+
 </beans>

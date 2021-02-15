@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Get Projects</shortname>
+    <description><![CDATA[Gets a list of project names and ID's from the project service]]></description>
+    <url>/ecmarchitect/projects</url>
+    <family>ECM Architect</family>
+    <format default="json">argument</format>
+    <authentication>user</authentication>
+    <transaction allow="readonly">required</transaction>
+</webscript>
