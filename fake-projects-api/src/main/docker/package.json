@@ -1,0 +1,13 @@
+{
+  "name": "fake-projects-api",
+  "version": "1.0.0",
+  "description": "Fake Projects API Node.js app on Docker",
+  "author": "info@metaversant.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

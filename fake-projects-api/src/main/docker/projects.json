@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "projectName": "Some Project",
+      "projectId": "A001"
+    },
+    {
+      "projectName": "Some Other Project",
+      "projectId": "A002"
+    },
+    {
+      "projectName": "Yet Another Project",
+      "projectId": "A003"
+    },
+    {
+      "projectName": "Pilot Project",
+      "projectId": "A004"
+    },
+    {
+      "projectName": "Pet Project",
+      "projectId": "A005"
+    }
+  ]
+}

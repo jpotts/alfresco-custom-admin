@@ -445,10 +445,12 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-<modules>  <module>alfresco-custom-admin-platform</module>
-    <module>alfresco-custom-admin-share</module>
-    <module>alfresco-custom-admin-integration-tests</module>
-    <module>alfresco-custom-admin-platform-docker</module>
-    <module>alfresco-custom-admin-share-docker</module>
-  </modules>
+    <modules>
+        <module>alfresco-custom-admin-platform</module>
+        <module>alfresco-custom-admin-share</module>
+        <module>alfresco-custom-admin-integration-tests</module>
+        <module>alfresco-custom-admin-platform-docker</module>
+        <module>alfresco-custom-admin-share-docker</module>
+        <module>fake-projects-api</module>
+    </modules>
 </project>

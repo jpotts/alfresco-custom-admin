@@ -50,6 +50,13 @@ services:
     volumes:
       - alfresco-custom-admin-ass-volume:/opt/alfresco-search-services/contentstore
       - alfresco-custom-admin-ass-volume:/opt/alfresco-search-services/data
+  fake-projects-api:
+    image: fake-projects-api:development
+    build:
+      dockerfile: ./Dockerfile
+      context: ../../../fake-projects-api/target
+    ports:
+      - "3000:3000"
 volumes:
   alfresco-custom-admin-acs-volume:
     external: true

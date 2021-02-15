@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>alfresco-custom-admin</artifactId>
+        <groupId>com.ecmarchitect</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>fake-projects-api</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Filter the Dockerfile and the other files added to the container to be able to replace maven properties -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                <execution>
+                    <id>copy-and-filter-docker-resources</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>src/main/docker</directory>
+                                <filtering>true</filtering>
+                                <excludes>
+                                    <exclude>**/*.jar</exclude>
+                                    <exclude>**/*.so</exclude>
+                                    <exclude>**/*.gz</exclude>
+                                </excludes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+                <execution>
+                <id>copy-and-filter-docker-resources-non-filtered</id>
+                <phase>validate</phase>
+                <goals>
+                    <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <resources>
+                        <resource>
+                            <directory>src/main/docker</directory>
+                            <filtering>false</filtering>
+                            <includes>
+                                <include>**/*.jar</include>
+                                <include>**/*.so</include>
+                                <include>**/*.gz</include>
+                            </includes>
+                        </resource>
+                    </resources>
+                </configuration>
+                </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
