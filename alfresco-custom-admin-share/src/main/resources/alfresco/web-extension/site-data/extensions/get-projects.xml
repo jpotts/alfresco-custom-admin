@@ -1,0 +1,35 @@
+<extension>
+    <modules>
+        <module>
+            <id>ECM Architect Example Get Projects</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <configurations>
+                <config evaluator="string-compare" condition="DocLibActions">
+                    <actions>
+                        <action id="ecmarchitect.doclib.action.getProjects"
+                                icon="callws"
+                                type="javascript"
+                                label="ecmarchitect.doclib.action.getProjects.label">
+                            <param name="function">onActionGetProjects</param>
+                            <param name="failureMessage">ecmarchitect.doclib.action.getProjects.msg.failure</param>
+                        </action>
+                    </actions>
+                    <actionGroups>
+                        <actionGroup id="document-details">
+                            <action index="401" id="ecmarchitect.doclib.action.getProjects" />
+                        </actionGroup>
+                        <actionGroup id="document-browse">
+                            <action index="401" id="ecmarchitect.doclib.action.getProjects" />
+                        </actionGroup>
+                    </actionGroups>
+                </config>
+                <config evaluator="string-compare" condition="DocLibCustom">
+                    <dependencies>
+                        <js src="resources/alfresco-custom-admin-share/components/documentLibrary/ecmarchitect-doclib-actions.js" />
+                    </dependencies>
+                </config>
+            </configurations>
+        </module>
+    </modules>
+</extension>
