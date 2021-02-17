@@ -6,5 +6,12 @@
 
     <!-- The bootstrap-context.xml file is used for patch definitions, importers, 
 		 workflow, and loading custom content models.  -->
+    <bean class="org.alfresco.i18n.ResourceBundleBootstrapComponent">
+        <property name="resourceBundles">
+            <list>
+                <value>alfresco.module.alfresco-custom-admin-platform.messages.alfresco-custom-admin</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

@@ -1,0 +1,11 @@
+<webscript>
+    <shortname>Projects Console</shortname>
+    <description><![CDATA[Displays the status of the Projects API Settings.]]></description>
+    <url>/enterprise/admin/projects/api-settings</url>
+    <family>AdminConsole</family>
+    <family>ECM Architect</family>
+    <format default="html">argument</format>
+    <authentication>admin</authentication>
+    <lifecycle>internal</lifecycle>
+    <transaction allow="readwrite">required</transaction>
+</webscript>

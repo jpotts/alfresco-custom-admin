@@ -1,0 +1,10 @@
+.message {
+    background-color: #6E9E2D;
+    border: 1px solid rgba(110,158,45, 0.85);
+    box-shadow: 0 0 2px rgba(110,158,45, 0.85);
+    color: #fff;
+    font-family: Open Sans Bold,Arial,sans-serif;
+    font-size: 108%;
+    margin: 1em 0 0.666em;
+    padding: 7px 8px 8px;
+}

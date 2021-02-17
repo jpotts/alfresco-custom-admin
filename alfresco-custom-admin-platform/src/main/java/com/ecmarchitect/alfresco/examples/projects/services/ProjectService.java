@@ -36,6 +36,10 @@ public class ProjectService {
         return projectResults.getResults();
     }
 
+    public String getProjectsApiUrl() {
+        return projectsApiUrl;
+    }
+
     public void setProjectsApiUrl(String projectsApiUrl) {
         this.projectsApiUrl = projectsApiUrl;
     }

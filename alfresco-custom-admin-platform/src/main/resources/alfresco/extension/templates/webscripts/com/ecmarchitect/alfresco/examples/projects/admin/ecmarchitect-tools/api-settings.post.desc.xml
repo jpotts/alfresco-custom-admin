@@ -1,0 +1,10 @@
+<webscript>
+    <shortname>Project Settings</shortname>
+    <description><![CDATA[Saves the Projects API Settings.]]></description>
+    <url>/ecmarchitect/api-settings</url>
+    <family>ECM Architect</family>
+    <format default="json">argument</format>
+    <authentication>admin</authentication>
+    <lifecycle>internal</lifecycle>
+    <transaction allow="readwrite">required</transaction>
+</webscript>
