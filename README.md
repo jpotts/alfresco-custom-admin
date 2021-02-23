@@ -1,6 +1,16 @@
-# Alfresco AIO Project - SDK 4.0
+# Alfresco Example: Creating custom Alfresco admin console panels
 
-This is an All-In-One (AIO) project for Alfresco SDK 4.0.
+This source code accompanies a blog post called [Creating custom Alfresco admin console panels](https://ecmarchitect.com/archives/2021/02/23/4525).
+
+Creating custom admin console panels differ between Community Edition and Enterprise Edition. The first three steps (each step is tagged) sets up the use case:
+
+  * A Node.js app that returns a list of project IDs
+  * A repo tier web script that invokes the project API
+  * A share UI action that invokes the repo tier web script and shows the results in a Share dialog
+
+The 4th step splits into 4a for Enterprise Edition and 4b for Community Edition. 
+
+The project was created from the Alfresco SDK.
 
 Run with `./run.sh build_start` or `./run.bat build_start` and verify that it
 
@@ -26,21 +36,3 @@ All the services of the project are now run as docker containers. The run script
  `integration-tests` module and stop the environment.
  * `test`. Execute the integration tests (the environment must be already started).
 
-# Few things to notice
-
- * No parent pom
- * No WAR projects, the jars are included in the custom docker images
- * No runner project - the Alfresco environment is now managed through [Docker](https://www.docker.com/)
- * Standard JAR packaging and layout
- * Works seamlessly with Eclipse and IntelliJ IDEA
- * JRebel for hot reloading, JRebel maven plugin for generating rebel.xml [JRebel integration documentation]
- * AMP as an assembly
- * Persistent test data through restart thanks to the use of Docker volumes for ACS, ASS and database data
- * Integration tests module to execute tests against the final environment (dockerised)
- * Resources loaded from META-INF
- * Web Fragment (this includes a sample servlet configured via web fragment)
-
-# TODO
-
-  * Abstract assembly into a dependency so we don't have to ship the assembly in the archetype
-  * Functional/remote unit tests
